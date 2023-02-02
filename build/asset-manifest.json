@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/classes-handson/static/css/main.8abc15e6.css",
+    "main.js": "/classes-handson/static/js/main.b8476c38.js",
+    "index.html": "/classes-handson/index.html",
+    "main.8abc15e6.css.map": "/classes-handson/static/css/main.8abc15e6.css.map",
+    "main.b8476c38.js.map": "/classes-handson/static/js/main.b8476c38.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8abc15e6.css",
+    "static/js/main.b8476c38.js"
+  ]
+}
