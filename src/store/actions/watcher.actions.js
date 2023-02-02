@@ -11,6 +11,17 @@ export function loadWatchers() {
     }
 }
 
+export function addWatcher(watcher) {
+    return async dispatch => {
+        try {
+            watcherService.save(watcher)
+            dispatch({ type: 'ADD_WATCHER', watcher })
+        } catch (err) {
+            console.log('err:', err)
+        }
+    }
+}
+
 // export function removeWatcher(watcherId) {
 //     return async dispatch => {
 //         try {

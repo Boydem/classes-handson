@@ -1,7 +1,7 @@
 export function WatcherPreview({ watcher }) {
-    console.log('watcher:', watcher)
     return (
-        <article key={watcher._id} className='watcher'>
+        <article className='watcher'>
+            <img src={`https://robohash.org/${watcher.name}?set=set1`} alt='' />
             <h3>{watcher.name}</h3>
             <hr />
             <div className='watcher-btns-wrapper'>

@@ -45,6 +45,7 @@ async function save(watcher) {
         if (watcher._id) {
             return await storageService.put(WATCHERS_KEY, watcher)
         } else {
+            console.log('watcherToSave:', watcher)
             return await storageService.post(WATCHERS_KEY, watcher)
         }
     } catch (err) {
@@ -66,7 +67,7 @@ function _createWatchers() {
 
 function _createWatcher(name, movies = ['ocean11', 'ocean12', 'ocean13']) {
     return {
-        id: utilService.makeId(),
+        _id: utilService.makeId(),
         name,
         movies,
     }

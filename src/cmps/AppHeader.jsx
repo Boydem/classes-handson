@@ -14,8 +14,11 @@ function _AppHeader(props) {
                     <button onClick={onBack}>Back</button>
                 </section>
                 <nav>
+                    <NavLink exact to='/'>
+                        Watchers
+                    </NavLink>
                     <NavLink exact to='/animal'>
-                        Animal List
+                        Animals
                     </NavLink>
                     <NavLink exact to='/seasons'>
                         Seasons
