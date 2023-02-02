@@ -1,7 +1,13 @@
-import { Component } from 'react'
+import { Counter } from './counter'
 
-export class CountDown extends Component {
-    render() {
-        return <h1>Hello CountDown Class CMP</h1>
-    }
+export function CountDown() {
+    return (
+        <Counter
+            startFrom={10}
+            onDone={() => {
+                console.log('Done!')
+            }}
+            toTime={Date.now() - 1000 * 10}
+        />
+    )
 }

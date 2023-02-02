@@ -1,4 +1,4 @@
-export function AnimalPreview(animal) {
+export function AnimalPreview({ animal }) {
     let keyForUrl = `https://www.google.com/search?q=${animal.type.replace(' ', '%20')}`
     return (
         <article className='animal-preview'>

@@ -1,4 +1,3 @@
-import { Component } from 'react'
 import { AnimalPreview } from './animal-preview'
 
 export function AnimalList({ animalInfos }) {

@@ -10,15 +10,15 @@ export class SeasonClock extends Component {
         clock: new Date(),
         isDark: true,
     }
-    clockIntervalId
+    intervalId
     componentDidMount() {
-        this.clockIntervalId = setInterval(() => {
+        this.intervalId = setInterval(() => {
             this.setState({ clock: Date.now() })
         }, 1000)
     }
 
     setTheme = () => {
-        this.setState(prevState => ({ isDark: !this.state.isDark }))
+        this.setState(prevState => ({ isDark: !prevState.isDark }))
     }
 
     getCurrSeasonImg(currSeason) {
@@ -32,6 +32,10 @@ export class SeasonClock extends Component {
             case 'automn':
                 return <img src={automnPng} alt={`${currSeason}`} />
         }
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId)
     }
 
     render() {

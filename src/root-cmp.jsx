@@ -6,8 +6,8 @@ import { AppHeader } from './cmps/AppHeader'
 import { SeasonClock } from './cmps/season-clock'
 import { MouseMonitor } from './cmps/mouse-monitor'
 import { CountDown } from './cmps/count-down'
-import { AnimalIndex } from './cmps/animal-index'
-import { Home } from './views/home'
+import { AnimalIndex } from './views/animal-index'
+import { WatcherIndex } from './views/watcher-index'
 
 export function App() {
     return (
@@ -20,11 +20,11 @@ export function App() {
                         <Route path='/seasons' component={SeasonClock} />
                         <Route path='/count-down' component={CountDown} />
                         <Route path='/mouse-monitor' component={MouseMonitor} />
-                        <Route path='/' component={Home} />
+                        <Route path='/' component={WatcherIndex} />
                     </Switch>
                 </main>
                 <footer>
-                    <section className='container'>robotRights 2022 &copy;</section>
+                    <section className='container'>Kobirights 2022 &copy;</section>
                 </footer>
             </div>
         </Router>

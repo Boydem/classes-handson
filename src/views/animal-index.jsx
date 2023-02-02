@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { AnimalList } from './animal-list'
+import { AnimalList } from '../cmps/animal-list'
 
 export class AnimalIndex extends Component {
     animalInfos = [
