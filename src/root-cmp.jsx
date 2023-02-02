@@ -3,7 +3,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import './assets/scss/global.scss'
 import { AppHeader } from './cmps/AppHeader'
 
-import { Seasons } from './cmps/seasons'
+import { SeasonClock } from './cmps/season-clock'
 import { MouseMonitor } from './cmps/mouse-monitor'
 import { CountDown } from './cmps/count-down'
 import { AnimalIndex } from './cmps/animal-index'
@@ -17,7 +17,7 @@ export function App() {
                 <main className='container'>
                     <Switch>
                         <Route path='/animal' component={AnimalIndex} />
-                        <Route path='/seasons' component={Seasons} />
+                        <Route path='/seasons' component={SeasonClock} />
                         <Route path='/count-down' component={CountDown} />
                         <Route path='/mouse-monitor' component={MouseMonitor} />
                         <Route path='/' component={Home} />
