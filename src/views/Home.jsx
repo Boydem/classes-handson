@@ -1,8 +1,8 @@
+import { Component } from 'react'
 
-export function Home() {
-    return (
-        <div>
-            <h1>Home!</h1>
-        </div>
-    )
+class Home extends Component {
+    render() {
+        return <h1>Hello Home Class CMP</h1>
+    }
 }
+export { Home }
