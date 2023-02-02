@@ -20,6 +20,8 @@ export function App() {
                         <Route path='/seasons' component={SeasonClock} />
                         <Route path='/count-down' component={CountDown} />
                         <Route path='/mouse-monitor' component={MouseMonitor} />
+                        <Route path='/watcher/:watcherId' component={WatcherIndex} />
+                        <Route path='/watcher' component={WatcherIndex} />
                         <Route path='/' component={WatcherIndex} />
                     </Switch>
                 </main>

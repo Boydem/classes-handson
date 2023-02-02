@@ -1,8 +1,16 @@
 // Font Sizes
-.sm-font { font-size: rem(14px); }
-.md-font { font-size: rem(20px); }
-.lg-font { font-size: rem(30px); }
-.xl-font { font-size: rem(40px); }
+.sm-font {
+    font-size: rem(14px);
+}
+.md-font {
+    font-size: rem(20px);
+}
+.lg-font {
+    font-size: rem(30px);
+}
+.xl-font {
+    font-size: rem(40px);
+}
 
 // List
 .clean-list {
@@ -10,7 +18,7 @@
     padding: 0;
     list-style-type: none;
 
-    &>li {
+    & > li {
         margin: 0;
         padding: 0;
     }
@@ -19,22 +27,42 @@
 // Positioning
 .flex {
     display: flex;
-    &.column { flex-direction: column; }
-    &.justify-center { justify-content: center; }
-    &.align-center { align-items: center; }
-    &.wrap { flex-wrap: wrap; }
-    &.space-between { justify-content: space-between; }
-    &.space-around { justify-content: space-around; }
+    &.column {
+        flex-direction: column;
+    }
+    &.justify-center {
+        justify-content: center;
+    }
+    &.align-center {
+        align-items: center;
+    }
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.space-between {
+        justify-content: space-between;
+    }
+    &.space-around {
+        justify-content: space-around;
+    }
     &.auto-center {
         justify-content: center;
         align-items: center;
     }
-    > *.full-grow { flex: 1; }
+    > *.full-grow {
+        flex: 1;
+    }
 }
 
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
 
 .center-block {
     display: block;
@@ -42,25 +70,40 @@
 }
 
 // Media helpers
-.square-ratio { @include aspect-ratio(1, 1); }
+.square-ratio {
+    @include aspect-ratio(1, 1);
+}
 
-.wide-ratio { @include aspect-ratio(16, 9); }
+.wide-ratio {
+    @include aspect-ratio(16, 9);
+}
 
-.square-3 { @include aspect-ratio(4, 3); }
-
+.square-3 {
+    @include aspect-ratio(4, 3);
+}
 
 // Buttons
-.simple-button {
+.btn {
     background: transparent;
-    color: black;
     font-size: inherit;
     font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 0;
-    opacity: 0.6;
     transition: 0.3s all;
-    padding: 0;
+    padding: 0.25em 0.75em;
     cursor: pointer;
-
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.836);
+    &.primary {
+        background-color: $clr1;
+        border: 1px solid $clr1;
+    }
+    &.secondary {
+        background-color: $clr3;
+        border: 1px solid $clr3;
+    }
     &:disabled {
         cursor: initial;
         opacity: 0.2;
@@ -77,21 +120,40 @@
     }
 }
 
-.medium-button { font-size: 1.5rem; }
+.medium-button {
+    font-size: 1.5rem;
+}
 
 // Transitions
-.fast-trans { transition: 0.25s all; }
-.normal-trans { transition: 0.4s all; }
-.slow-trans { transition: 0.7s all; }
-
+.fast-trans {
+    transition: 0.25s all;
+}
+.normal-trans {
+    transition: 0.4s all;
+}
+.slow-trans {
+    transition: 0.7s all;
+}
 
 // Spacing
-.p5 { padding: 5px; }
-.p10 { padding: 10px; }
-.p20 { padding: 20px; }
-.m5 { margin: 5px; }
-.m10 { margin: 10px; }
-.m20 { margin: 20px; }
+.p5 {
+    padding: 5px;
+}
+.p10 {
+    padding: 10px;
+}
+.p20 {
+    padding: 20px;
+}
+.m5 {
+    margin: 5px;
+}
+.m10 {
+    margin: 10px;
+}
+.m20 {
+    margin: 20px;
+}
 
 // Normalize Background
 .normBackground {
@@ -107,9 +169,10 @@
     border-bottom: 1px solid lightgray;
 }
 
-
 // Others
-.blurred { filter: blur(4px); }
+.blurred {
+    filter: blur(4px);
+}
 
 .simple-form {
     display: flex;
@@ -117,11 +180,11 @@
     width: 300px;
     margin: 15px auto;
 
-    &>*:not(:last-child) {
+    & > *:not(:last-child) {
         margin-bottom: 10px;
     }
 
-    input:not([type="checkbox"]),
+    input:not([type='checkbox']),
     button {
         padding: 5px 8px;
         width: 100%;

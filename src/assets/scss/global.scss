@@ -19,9 +19,7 @@
 @import 'views/robot-edit';
 
 // Components
-@import 'cmps/robot-list';
-@import 'cmps/robot-preview';
-@import 'cmps/robot-filter';
+@import 'cmps/watcher-preview';
 @import 'cmps/app-header';
 @import 'cmps/nice-button';
 
@@ -37,11 +35,11 @@
 
     > footer {
         background-color: #111;
-        color: white;
+        color: rgba(255, 255, 255, 0.836);
     }
 }
 
 .dark {
     background-color: #333;
-    color: white;
+    color: rgba(255, 255, 255, 0.836);
 }
